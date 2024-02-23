@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public class PasswordChecker {
     public static void checkPasswordLength(String password) throws WrongPasswordException {
-        if (password.length() < Constant.PASSWORD_LENGTH_CONST || password.length() == 0) {
+        if (password.length() < Constant.PASSWORD_LENGTH_CONST && password.length() != 0) {
             System.out.println("Correct password length");
         } else {
             throw new WrongPasswordException("Error password length");
@@ -17,7 +17,7 @@ public class PasswordChecker {
     }
 
     public static void checkPasswordLength(char[] charPassword) throws WrongPasswordException {
-        if (charPassword.length < Constant.PASSWORD_LENGTH_CONST || charPassword.length == 0) {
+        if (charPassword.length < Constant.PASSWORD_LENGTH_CONST && charPassword.length != 0) {
             System.out.println("Correct password length");
         } else {
             throw new WrongPasswordException("Error password length");

@@ -6,7 +6,7 @@ import com.tms.lesson13_hw.exception.WrongLoginException;
 public class LoginChecker {
     public static void checkLoginLength(String login)
             throws WrongLoginException {
-        if (login.length() < Constant.LOGIN_LENGTH_CONST || login.length() == 0) {
+        if (login.length() < Constant.LOGIN_LENGTH_CONST && login.length() != 0) {
             System.out.println("Correct login length");
         } else {
             throw new WrongLoginException("Invalid login length (must be less than twenty and greater than zero)");
@@ -15,7 +15,7 @@ public class LoginChecker {
 
     public static void checkLoginLength(char[] charLogin)
             throws WrongLoginException {
-        if (charLogin.length < Constant.LOGIN_LENGTH_CONST || charLogin.length == 0) {
+        if (charLogin.length < Constant.LOGIN_LENGTH_CONST && charLogin.length != 0) {
             System.out.println("Correct login length");
         } else {
             throw new WrongLoginException("Invalid login length (must be less than twenty and greater than zero)");
