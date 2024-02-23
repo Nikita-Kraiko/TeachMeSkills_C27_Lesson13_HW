@@ -51,6 +51,7 @@ public class RegistrationChecker {
             System.out.println("there are no numbers in the password");
             return false;
         }
+
         try {
             PasswordChecker.checkConfirmPassword(charConfirmPassword, charPassword);
         } catch (WrongPasswordException e) {
